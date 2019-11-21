@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ce-make",
+            "type": "shell",
+            "command": "rm -rf bin obj; $CEDEV/bin/make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
