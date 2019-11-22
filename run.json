@@ -1,7 +1,7 @@
 {
-    "rom": "ti-84ce.rom",
+    "rom": "C:/Users/120rpatel/CEdev/CEmu/ti-84ce.rom",
     "transfer_files": [
-        "DEMO.8xp"
+        "bin/DEMO.8xp"
     ],
     "target": {
         "name": "DEMO",

@@ -1,0 +1,14 @@
+{
+    "rom": "ROM",
+    "transfer_files": [
+        "bin/NAME.8xp"
+    ],
+    "target": {
+        "name": "NAME",
+        "isASM": false
+    },
+    "sequence": [
+        "action|launch"
+    ],
+    "hashes": {}
+}

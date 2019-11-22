@@ -2,9 +2,14 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "ce-make",
+            "label": "Compile",
             "type": "shell",
             "command": "rm -rf bin obj; $CEDEV/bin/make",
+        },
+        {
+            "label": "Compile and Run",
+            "type": "shell",
+            "command": "rm -rf bin obj; $CEDEV/bin/make; $CEDEV/CEmu/CEmu.exe -t run.json",
             "group": {
                 "kind": "build",
                 "isDefault": true
