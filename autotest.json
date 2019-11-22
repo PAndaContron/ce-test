@@ -1,0 +1,14 @@
+{
+    "rom": "ti-84ce.rom",
+    "transfer_files": [
+        "DEMO.8xp"
+    ],
+    "target": {
+        "name": "DEMO",
+        "isASM": false
+    },
+    "sequence": [
+        "action|launch"
+    ],
+    "hashes": {}
+}
