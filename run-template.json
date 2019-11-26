@@ -1,7 +1,8 @@
 {
     "rom": "ROM",
     "transfer_files": [
-        "bin/NAME.8xp"
+        "bin/NAME.8xp",
+        "clibs/clibs.8xg"
     ],
     "target": {
         "name": "NAME",
