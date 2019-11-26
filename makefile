@@ -12,4 +12,4 @@ all: clear-dirs
 	sed -e "s,ROM,$(CEDEV)/CEmu/ti-84ce.rom,g" -e "s,NAME,$(NAME),g" <run-template.json >run.json
 
 run: all
-	$(CEDEV)/CEmu/CEmu.exe -t run.json
+	$(CEDEV)/CEmu/CEmu -t run.json
