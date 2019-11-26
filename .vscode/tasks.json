@@ -4,12 +4,12 @@
         {
             "label": "Compile",
             "type": "shell",
-            "command": "rm -rf bin obj; $CEDEV/bin/make",
+            "command": "$CEDEV/bin/make all",
         },
         {
             "label": "Compile and Run",
             "type": "shell",
-            "command": "rm -rf bin obj; $CEDEV/bin/make; $CEDEV/CEmu/CEmu.exe -t run.json",
+            "command": "$CEDEV/bin/make run",
             "group": {
                 "kind": "build",
                 "isDefault": true

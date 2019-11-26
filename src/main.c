@@ -21,7 +21,7 @@ void printText(const char *text, uint8_t x, uint8_t y);
 /* Put all your code here */
 void main(void) {
     /* Initialize some strings */
-    const char *HelloWorld = "Hello World!";
+    const char *HelloWorld = "hi there";
     const char *Welcome = "Compiled from VS Code!";
 
     /* Clear the homescreen */
