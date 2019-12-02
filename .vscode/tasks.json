@@ -4,12 +4,14 @@
         {
             "label": "Compile",
             "type": "shell",
-            "command": "$CEDEV/bin/make all",
+            "command": "make",
+            "args": ["all"]
         },
         {
             "label": "Compile and Run",
             "type": "shell",
-            "command": "$CEDEV/bin/make run",
+            "command": "make",
+            "args": ["run"],
             "group": {
                 "kind": "build",
                 "isDefault": true
