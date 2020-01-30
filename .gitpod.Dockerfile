@@ -1,16 +1,16 @@
-FROM gitpod/workspace-full
-
-USER gitpod
-
-RUN echo HELLO >~/file.txt
+FROM gitpod/workspace-full-vnc
 
 USER root
 
-# Install custom tools, runtime, etc. using apt-get
-# For example, the command below would install "bastet" - a command line tetris clone:
-#
-# RUN sudo apt-get -q update && \
-#     sudo apt-get install -yq bastet && \
-#     sudo rm -rf /var/lib/apt/lists/*
-#
-# More information: https://www.gitpod.io/docs/42_config_docker/
+RUN sh -c "echo 'deb http://download.opensuse.org/repositories/home:/adriweb:/CEmu/xUbuntu_19.04/ /' > /etc/apt/sources.list.d/home:adriweb:CEmu.list" \
+    && wget -nv https://download.opensuse.org/repositories/home:adriweb:CEmu/xUbuntu_19.04/Release.key -O - | apt-key add -
+
+RUN wget -nc https://dl.winehq.org/wine-builds/winehq.key -O - | apt-key add - \
+    && apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ disco main' \
+    && add-apt-repository ppa:cybermax-dexter/sdl2-backport
+
+RUN apt-get update
+RUN apt-get install -y cemu winehq-devel
+
+RUN wget https://github.com/CE-Programming/toolchain/releases/download/v8.8/linux_CEdev.tar.gz -O - | tar zxvf - -C /
+
